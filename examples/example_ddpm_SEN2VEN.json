@@ -138,13 +138,13 @@
             "mask_square_B": false,
             "rand_mask_A": false
         },
-        "crop_size": 128,
+        "crop_size": 512,
         "dataset_mode": "aligned",
         "direction": "AtoB",
         "inverted_mask": false,
-        "load_size": 256,
+        "load_size": 1024,
         "max_dataset_size": 1000000000,
-        "num_threads": 16,
+        "num_threads": 12,
         "online_context_pixels": 0,
         "online_fixed_mask_size": -1,
         "online_select_category": -1,
@@ -195,10 +195,10 @@
             "type": [
                 "visdom"
             ],
-            "visdom_autostart": true,
+            "visdom_autostart": false,
             "visdom_port": 8097,
             "visdom_server": "http://localhost",
-            "winsize": 256
+            "winsize": 512
         },
         "no_html": false,
         "print_freq": 500,
@@ -305,11 +305,11 @@
         "no_rotate": true
     },
     "checkpoints_dir": "checkpoints",
-    "dataroot": "datasets/SEN2VEN_mini",
+    "dataroot": "datasets/Color2Normal",
     "ddp_port": "12355",
     "gpu_ids": "0",
     "model_type": "palette",
-    "name": "SEN2VEN",
+    "name": "Color2Normal",
     "phase": "train",
     "suffix": "",
     "test_batch_size": 1,
