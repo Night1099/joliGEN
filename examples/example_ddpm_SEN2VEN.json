@@ -1,18 +1,18 @@
 {
     "D": {
         "dropout": false,
-        "n_layers": 3,
+        "n_layers": 4,
         "ndf": 64,
         "netDs": [
-            "projected_d",
-            "basic"
+            "pixel",
+            "depth"
         ],
         "no_antialias": false,
         "no_antialias_up": false,
         "norm": "instance",
         "proj_config_segformer": "models/configs/segformer/segformer_config_b0.json",
         "proj_interp": -1,
-        "proj_network_type": "efficientnet",
+        "proj_network_type": "segformer",
         "proj_weight_segformer": "models/configs/segformer/pretrain/segformer_mit-b0.pth",
         "spectral": false,
         "temporal_every": 4,
@@ -29,7 +29,7 @@
         "dropout": false,
         "nblocks": 9,
         "netE": "resnet_256",
-        "netG": "unet_mha",
+        "netG": "unet_256",
         "ngf": 64,
         "norm": "instance",
         "padding_type": "reflect",
@@ -63,7 +63,7 @@
         "re": {
             "P_lr": 0.0002,
             "adversarial_loss_p": false,
-            "netP": "unet_128",
+            "netP": "unet_256",
             "no_train_P_fake_images": false,
             "nuplet_size": 3,
             "projection_threshold": 1.0
@@ -103,7 +103,7 @@
                 0,
                 765
             ],
-            "super_resolution_scale": 2.0,
+            "super_resolution_scale": 1.0,
             "task": "pix2pix"
         }
     },
@@ -138,7 +138,7 @@
             "mask_square_B": false,
             "rand_mask_A": false
         },
-        "crop_size": 512,
+        "crop_size": 256,
         "dataset_mode": "aligned",
         "direction": "AtoB",
         "inverted_mask": false,
